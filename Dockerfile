@@ -1,4 +1,5 @@
 FROM zookeeper:latest
+RUN apt-get update
 RUN apt-get install -y vim
 RUN apt-get install openjdk-8-jdk -y
 RUN rm -rf /data/myid
