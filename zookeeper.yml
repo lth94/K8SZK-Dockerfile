@@ -6,6 +6,13 @@ metadata:
   labels:
     type: zk
 spec:
+  restartPolicy: Never
+  hostAliases:
+  - ip: "10.97.203.143"
+    hostnames:
+    - "zookeeper"
+    - "master01"
+    - "master02"
   containers:
   - name: zookeeper
     image: lllth94/k8s-zookeeper:latest
